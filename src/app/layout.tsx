@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { AppBar, Typography } from "@mui/material";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -25,7 +26,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <title>Quiz App</title>
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <header>
+          <AppBar position="static" sx={{ bgcolor: "#4BC0C0" }}>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} p={2}>
+              Quiz App
+            </Typography>
+          </AppBar>
+        </header>
+
         {children}
       </body>
     </html>
