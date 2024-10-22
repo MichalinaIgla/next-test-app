@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { AppBar, Typography } from "@mui/material";
+import { AppBar, Box, Typography } from "@mui/material";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -38,7 +38,9 @@ export default function RootLayout({
           </AppBar>
         </header>
 
+
         {children}
+
       </body>
     </html>
   );

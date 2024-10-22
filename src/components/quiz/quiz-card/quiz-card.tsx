@@ -1,17 +1,25 @@
-import { Box, Card, CardContent, CardMedia } from "@mui/material"
+import { Box, Button, Card, CardContent, CardMedia, Typography } from "@mui/material"
 import PlayArrowRoundedIcon from '@mui/icons-material/PlayArrowRounded';
 
 export const QuizzCard = () => {
   return (
     <Card sx={{ maxWidth: 345 }}>
+      <CardMedia
+        sx={{ height: 200 }}
+        image="/static/images/code-image-for-quiz.png"
+        title="green iguana"
+      />
       <CardContent>
-        <CardMedia
-          sx={{ height: 140 }}
-          image="../../../images/code-image-for-quiz.png"
-          title="green iguana"
-        />
-        Quizz
-        <PlayArrowRoundedIcon />
+        <Box display='flex' justifyContent='space-between'>
+          <Typography alignItems='center' display='flex'>
+
+            Quizz
+          </Typography>
+          <Button>
+
+            <PlayArrowRoundedIcon />
+          </Button>
+        </Box>
       </CardContent>
     </Card>
   )
